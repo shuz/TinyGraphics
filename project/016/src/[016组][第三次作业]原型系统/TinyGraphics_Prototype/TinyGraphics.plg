@@ -1,0 +1,56 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TinyGraphics - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\cat\LOCALS~1\Temp\RSP11.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/TinyGraphics.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"X:\home\micky\My Documents\Homeworks\Computer Graphics\project\TinyGraphics\TinyGraphicsDoc.cpp"
+"X:\home\micky\My Documents\Homeworks\Computer Graphics\project\TinyGraphics\TinyGraphicsView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\cat\LOCALS~1\Temp\RSP11.tmp" 
+Creating temporary file "C:\DOCUME~1\cat\LOCALS~1\Temp\RSP12.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/TinyGraphics.pdb" /debug /machine:I386 /out:"Debug/TinyGraphics.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\ModifyPerspectiveCamera.obj"
+".\Debug\StdAfx.obj"
+".\Debug\TinyGraphics.obj"
+".\Debug\TinyGraphicsDoc.obj"
+".\Debug\TinyGraphicsView.obj"
+".\Debug\InsertCuboid.obj"
+".\Debug\Graphics2D.obj"
+".\Debug\Cuboid.obj"
+".\Debug\Object3D.obj"
+".\Debug\Graphics3D.obj"
+".\Debug\ViewingGraphics3D.obj"
+".\Debug\World3D.obj"
+".\Debug\Camera.obj"
+".\Debug\ParellelCamera.obj"
+".\Debug\PerspectiveCamera.obj"
+".\Debug\Matrix4D.obj"
+".\Debug\Vector3D.obj"
+".\Debug\Vector4D.obj"
+".\Debug\ColorRGB.obj"
+".\Debug\CDCGraphics2D.obj"
+".\Debug\TinyGraphics.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\cat\LOCALS~1\Temp\RSP12.tmp"
+<h3>Output Window</h3>
+Compiling...
+TinyGraphicsDoc.cpp
+TinyGraphicsView.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+TinyGraphics.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

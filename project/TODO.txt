@@ -1,0 +1,22 @@
+OPTIMIZE GET_MATRIX OF CAMERA
+
+CONE NORMAL
+
+CLIP
+
+RENDER DIALOG SIZING
+
+ADD ... TO INSERT
+
+ON OFF LIGHTS
+
+note:
+the refract index of a light source on the surface of an object is undefined,
+and irrelative to the direction of lights.
+
+the refract behavior of intersected part of transparent objects a bit strange,
+the light is refracted whenever it passes the surface of an object.
+
+the refract index of a light source in the intersected part of several objects,
+it is assigned to be that of the first object that contains it in the world.
+

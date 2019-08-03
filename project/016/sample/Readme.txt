@@ -1,0 +1,1 @@
+texture没有被Attach上去，因为存盘文件中保存了绝对路径。故请在打开后自行Attach.

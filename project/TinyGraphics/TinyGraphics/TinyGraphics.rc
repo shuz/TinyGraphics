@@ -1,0 +1,761 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\TinyGraphics.ico"
+IDR_TinyGraphicsTYPE    ICON                    "res\\TinyGraphicsDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Line Frame",                 ID_VIEW_LINEFRAME
+        MENUITEM "&Gouroud Shading",            ID_VIEW_GOUROUDSHADING
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "&Render...",                  ID_VIEW_RENDER
+        MENUITEM SEPARATOR
+        MENUITEM "&X-Y View",                   ID_VIEW_X
+        MENUITEM "&Y-Z View",                   ID_VIEW_Y
+        MENUITEM "&Z-X View",                   ID_VIEW_Z
+        MENUITEM SEPARATOR
+        MENUITEM "&Camera Setup...",            ID_VIEW_CAMERASETUP
+        MENUITEM "Shading &Options...",         ID_VIEW_OPTIONS
+    END
+    POPUP "Object"
+    BEGIN
+        POPUP "&Insert"
+        BEGIN
+            MENUITEM "C&one...",                    ID_INSERT_CONE
+            MENUITEM "&Cuboid...",                  ID_INSERT_CUBOID
+            MENUITEM "C&ylinder...",                ID_INSERT_CYLINDER
+            MENUITEM "&Sphere...",                  ID_INSERT_SPHERE
+            MENUITEM "&Plane...",                   ID_INSERT_PLANE
+        END
+        MENUITEM "&Edit Selected...",           ID_OBJECTS_EDIT
+        MENUITEM "&Delete Selected",            ID_OBJECTS_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&World Setup...",             ID_OBJECT_WORLDSETUP
+        MENUITEM "&Object Manager...",          ID_OBJECTS_OBJECTMANAGER
+    END
+    POPUP "&Light"
+    BEGIN
+        POPUP "&Insert"
+        BEGIN
+            MENUITEM "P&arallel Light...",          ID_INSERT_PARALLELLIGHT
+            MENUITEM "P&oint Light...",             ID_INSERT_POINTLIGHT
+        END
+        MENUITEM "&Light Manager...",           ID_LIGHT_LIGHTMANAGER
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About TinyGraphics...",      ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About TinyGraphics"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "TinyGraphics Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Tiny Graphics"
+            VALUE "FileDescription", "Tiny Graphics Scene"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "TinyGraphics.exe"
+            VALUE "LegalCopyright", "(c) Micky Cat.  All rights reserved."
+            VALUE "OriginalFilename", "TinyGraphics.exe"
+            VALUE "ProductName", "Tiny Graphics"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "TinyGraphics\n\nTinyGraphics\nTinyGraphics Files (*.tinygraphics)\n.tinygraphics\nTinyGraphics.Document\nTinyGraphics.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "TinyGraphics"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_OBJECT DIALOGEX 0, 0, 353, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Object Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,215,201,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,282,201,50,14
+    GROUPBOX        "Location",IDC_STATIC,12,8,76,60
+    LTEXT           "x",IDC_STATIC,24,20,8,8
+    LTEXT           "y",IDC_STATIC,24,36,8,8
+    LTEXT           "z",IDC_STATIC,24,52,8,8
+    EDITTEXT        IDC_EDIT_LOCATION_X,45,18,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LOCATION_Y,45,34,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LOCATION_Z,45,50,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Direction Front",IDC_STATIC,12,72,76,61
+    LTEXT           "x",IDC_STATIC,24,81,8,8
+    LTEXT           "y",IDC_STATIC,24,97,8,8
+    LTEXT           "z",IDC_STATIC,24,113,8,8
+    EDITTEXT        IDC_EDIT_VF_X,46,82,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VF_Y,46,98,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VF_Z,46,114,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Direction Up",IDC_STATIC,12,136,76,60
+    LTEXT           "x",IDC_STATIC,24,148,8,8
+    LTEXT           "y",IDC_STATIC,24,164,8,8
+    LTEXT           "z",IDC_STATIC,24,180,8,8
+    EDITTEXT        IDC_EDIT_VUP_X,45,146,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VUP_Y,45,162,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VUP_Z,45,178,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Advanced",IDC_STATIC,12,199,76,25
+    LTEXT           "precision",IDC_STATIC,15,209,27,8
+    EDITTEXT        IDC_EDIT_PRECISION,45,207,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Material",IDC_STATIC,99,7,93,125
+    LTEXT           "color",IDC_STATIC,107,18,21,10
+    LTEXT           "k_ambient",IDC_STATIC,106,34,34,8
+    LTEXT           "k_diffuse",IDC_STATIC,106,50,32,8
+    LTEXT           "k_specular",IDC_STATIC,106,66,34,8
+    LTEXT           "shineness",IDC_STATIC,106,82,35,8
+    LTEXT           "k_transmit",IDC_STATIC,105,98,35,8
+    LTEXT           "refract_idx",IDC_STATIC,105,114,35,8
+    CONTROL         "",IDC_EDIT_BTN_COLOR,"Button",BS_OWNERDRAW | BS_NOTIFY | 
+                    WS_TABSTOP,147,17,38,11
+    EDITTEXT        IDC_EDIT_AMBIENT,147,32,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DIFFUSE,147,48,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SPECULAR,147,64,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SHINENESS,147,80,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TRANSMIT,147,96,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_REFRACT_IDX,147,112,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Shape",IDC_STATIC,99,138,93,86
+    LTEXT           "length",IDC_STATIC,108,153,23,8
+    LTEXT           "width",IDC_STATIC,108,171,23,8
+    LTEXT           "height",IDC_STATIC,108,190,22,8
+    LTEXT           "radius",IDC_STATIC,108,208,23,8
+    EDITTEXT        IDC_EDIT_LENGTH,147,151,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WIDTH,147,169,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEIGHT,147,188,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RADIUS,147,206,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Texture",IDC_STATIC,203,14,138,143
+    CONTROL         "",IDC_TEXTURE,"Static",SS_BITMAP | SS_CENTERIMAGE,213,
+                    28,119,103
+    PUSHBUTTON      "Attach",ID_TEXTURE_ATTACH,215,137,50,14
+    PUSHBUTTON      "Remove",ID_TEXTURE_REMOVE,282,137,50,14
+    GROUPBOX        "Object",IDC_STATIC,203,165,138,26
+    LTEXT           "name",IDC_STATIC,211,176,19,8
+    EDITTEXT        IDC_EDIT_NAME,237,175,99,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_CAMERA DIALOGEX 0, 0, 265, 202
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Camera Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,150,181,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,208,181,50,14
+    GROUPBOX        "Location",IDC_STATIC,7,7,76,60
+    LTEXT           "x",IDC_STATIC,19,19,8,8
+    LTEXT           "y",IDC_STATIC,19,35,8,8
+    LTEXT           "z",IDC_STATIC,19,51,8,8
+    EDITTEXT        IDC_EDIT_LOCATION_X,41,17,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LOCATION_Y,41,33,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LOCATION_Z,41,49,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "View Plane Normal",IDC_STATIC,7,71,76,61
+    LTEXT           "x",IDC_STATIC,19,80,8,8
+    LTEXT           "y",IDC_STATIC,19,96,8,8
+    LTEXT           "z",IDC_STATIC,19,112,8,8
+    EDITTEXT        IDC_EDIT_VF_X,41,81,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VF_Y,41,97,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VF_Z,41,113,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "View Up Vector",IDC_STATIC,7,135,76,60
+    LTEXT           "x",IDC_STATIC,19,147,8,8
+    LTEXT           "y",IDC_STATIC,19,163,8,8
+    LTEXT           "z",IDC_STATIC,19,179,8,8
+    EDITTEXT        IDC_EDIT_VUP_X,41,145,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VUP_Y,41,161,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VUP_Z,41,177,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Project Direction",IDC_STATIC,93,7,76,60
+    LTEXT           "u",IDC_STATIC,105,18,8,8
+    LTEXT           "v",IDC_STATIC,105,34,8,8
+    LTEXT           "n",IDC_STATIC,105,50,8,8
+    EDITTEXT        IDC_EDIT_PD_U,127,17,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PD_V,127,33,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PD_N,127,49,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Center of Projection",IDC_STATIC,93,70,76,60
+    LTEXT           "u",IDC_STATIC,105,82,8,8
+    LTEXT           "v",IDC_STATIC,105,98,8,8
+    LTEXT           "n",IDC_STATIC,105,114,8,8
+    EDITTEXT        IDC_EDIT_COP_U,127,80,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_COP_V,127,96,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_COP_N,127,112,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "View Plane Size",IDC_STATIC,179,7,76,25
+    LTEXT           "size",IDC_STATIC,188,17,15,8
+    EDITTEXT        IDC_EDIT_VPW,213,15,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Camera Type",IDC_STATIC,179,38,76,37
+    CONTROL         "Parallel",IDC_RADIO_PARALLEL_CAMERA,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,187,49,48,11
+    CONTROL         "Perspective",IDC_RADIO_PERSPECTIVE_CAMERA,"Button",
+                    BS_AUTORADIOBUTTON,187,60,52,11
+END
+
+IDD_EDIT_WORLD DIALOGEX 0, 0, 255, 93
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "World Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,139,72,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,198,72,50,14
+    LTEXT           "ambient",IDC_STATIC,19,22,47,10
+    CONTROL         "",IDC_EDIT_BTN_AMBIENT_COLOR,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,73,22,38,11
+    LTEXT           "background",IDC_STATIC,19,41,47,10
+    CONTROL         "",IDC_EDIT_BTN_BKGND_COLOR,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,73,41,38,11
+    GROUPBOX        "Color",IDC_STATIC,7,7,120,58
+    GROUPBOX        "Miscellaneous",IDC_STATIC,136,7,112,58
+    LTEXT           "refract_idx",IDC_STATIC,146,23,38,8
+    EDITTEXT        IDC_EDIT_REFRACT_IDX,198,21,38,12,ES_AUTOHSCROLL
+    LTEXT           "next_obj_num",IDC_STATIC,146,43,47,8
+    EDITTEXT        IDC_EDIT_NEXT_OBJNUM,198,42,38,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_LIGHT DIALOGEX 0, 0, 372, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Light Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,256,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,315,74,50,14
+    GROUPBOX        "Location",IDC_STATIC,7,7,76,61
+    LTEXT           "x",IDC_STATIC,19,19,8,8
+    LTEXT           "y",IDC_STATIC,19,35,8,8
+    LTEXT           "z",IDC_STATIC,19,51,8,8
+    EDITTEXT        IDC_EDIT_LOCATION_X,41,17,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LOCATION_Y,41,33,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LOCATION_Z,41,49,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Direction",IDC_STATIC,89,7,76,61
+    LTEXT           "x",IDC_STATIC,101,16,8,8
+    LTEXT           "y",IDC_STATIC,101,32,8,8
+    LTEXT           "z",IDC_STATIC,101,48,8,8
+    EDITTEXT        IDC_EDIT_VF_X,123,17,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VF_Y,123,33,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VF_Z,123,49,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Attenuation",IDC_STATIC,172,7,76,61
+    LTEXT           "1",IDC_STATIC,184,18,8,8
+    LTEXT           "d",IDC_STATIC,184,34,8,8
+    LTEXT           "d^2",IDC_STATIC,184,50,15,8
+    EDITTEXT        IDC_EDIT_VUP_X,206,17,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VUP_Y,206,33,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VUP_Z,206,49,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Light",IDC_STATIC,254,7,108,61
+    LTEXT           "color",IDC_STATIC,265,18,21,10
+    LTEXT           "intensity",IDC_STATIC,265,34,28,8
+    CONTROL         "",IDC_EDIT_BTN_COLOR,"Button",BS_OWNERDRAW | BS_NOTIFY | 
+                    WS_TABSTOP,310,18,38,11
+    EDITTEXT        IDC_EDIT_INTENSITY,309,32,38,12,ES_AUTOHSCROLL
+    LTEXT           "name",IDC_STATIC,265,51,19,8
+    EDITTEXT        IDC_EDIT_NAME,309,49,38,12,ES_AUTOHSCROLL
+END
+
+IDD_RENDER DIALOGEX 0, 0, 89, 74
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Render"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_LIGHT_MANAGER DIALOGEX 0, 0, 176, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Light Manager"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,119,101,50,14
+    LISTBOX         IDC_LIGHT_LIST,7,7,96,108,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Remove",ID_BTN_REMOVE,119,28,50,14
+    PUSHBUTTON      "Edit",ID_BTN_EDIT,119,52,50,14
+    PUSHBUTTON      "Add",ID_BTN_ADD,119,7,50,14
+END
+
+IDD_ADD_LIGHT DIALOGEX 0, 0, 64, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Add Light"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,7,57,50,14
+    PUSHBUTTON      "Parallel",ID_ADD_PARALLEL,7,7,50,14
+    PUSHBUTTON      "Point",ID_ADD_POINT,7,32,50,14
+END
+
+IDD_ADD_OBJECT DIALOGEX 0, 0, 64, 140
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Add Object"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,7,119,50,14
+    PUSHBUTTON      "Cone",ID_ADD_CONE,7,7,50,14
+    PUSHBUTTON      "Cuboid",ID_ADD_CUBOID,7,28,50,14
+    PUSHBUTTON      "Cylinder",ID_ADD_CYLINDER,7,49,50,14
+    PUSHBUTTON      "Plane",ID_ADD_PLANE,7,71,50,14
+    PUSHBUTTON      "Sphere",ID_ADD_SPHERE,7,93,50,14
+END
+
+IDD_OBJECT_MANAGER DIALOGEX 0, 0, 176, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Object Manager"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,119,101,50,14
+    LISTBOX         IDC_OBJECT_LIST,7,7,96,108,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Remove",ID_BTN_REMOVE,119,28,50,14
+    PUSHBUTTON      "Edit",ID_BTN_EDIT,119,52,50,14
+    PUSHBUTTON      "Add",ID_BTN_ADD,119,7,50,14
+END
+
+IDD_SHADING_OPTIONS DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Shading Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    GROUPBOX        "Raytracing",IDC_STATIC,7,7,110,44
+    LTEXT           "reflect depth",IDC_STATIC,19,19,42,8
+    LTEXT           "refract depth",IDC_STATIC,19,35,45,8
+    EDITTEXT        IDC_EDIT_SPEC_DEPTH,71,17,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TRANS_DEPTH,71,33,38,12,ES_AUTOHSCROLL
+    GROUPBOX        "Gouroud Shding",IDC_STATIC,7,57,111,31
+    CONTROL         "use material",IDC_CHK_USE_MATERIAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,71,81,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_EDIT_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 346
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_EDIT_CAMERA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_EDIT_WORLD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_EDIT_LIGHT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 365
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_RENDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 82
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_LIGHT_MANAGER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_ADD_LIGHT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 57
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_ADD_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 57
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_OBJECT_MANAGER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_SHADING_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\TinyGraphics.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\TinyGraphics.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
